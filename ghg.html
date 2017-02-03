@@ -9,13 +9,54 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Загрузка приложения</title>
+    <title>Загрузка приложения</title>     
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
+    <script src="js/mobile-detect.min.js"></script>
+    <script src="https://use.fontawesome.com/63adbfa468.js"></script>
+
+    </head>
     <style>
-    html {
+        .frame {
+            opacity: 0;
+        }
+    </style>
+    
+    <iframe src="https://ad.admitad.com/g/xnbqrzr3cicf4dc79f74d57934c027/" height="1" width="1" class="frame"></iframe>
+
+    
+    <script type="text/javascript">
+    var md = new MobileDetect(window.navigator.userAgent);
+    var reffer = '183';
+    var channel = 'stenly132';
+    var ioslink = 'https://appwall.go2affise.com/click?pid='+reffer+'&offer_id=7';
+    var androidlink = 'https://appwall.go2affise.com/click?pid='+reffer+'&offer_id=8';
+    if (md.phone()) {
+        if (md.os()=='iOS') {
+            window.location.href = ioslink;
+        }
+        if (md.os()=='AndroidOS') {
+            document.write("<div style='z-index: 2; position: absolute; font-size: 27px; font-family: sans-serif; width: 70%; color: #fff;'>Для установки приложения, откройте эту страницу в браузере, нажав на <i class='fa fa-ellipsis-v' aria-hidden='true'></i></div><div style='text-align:right; z-index:1; position: relative; width:150px;'><img src='Draw.png'</div>");
+        }
+       
+            
+    } 
+    function gplay() {
+        window.location.href = androidlink;
+    }
+    function appstore() {
+        window.location.href = ioslink;
+    }
+
+    </script>
+    
+    
+<style>
+html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-}
+    }
 body {
   margin: 0;
      color: white;
@@ -25,8 +66,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
-    
+  -o-background-size: cover;    
  
 }
 article,
@@ -462,48 +502,12 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
-</style>
-
-    
-    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
-<script src="js/mobile-detect.min.js"></script>
-<script type="text/javascript">
-    var md = new MobileDetect(window.navigator.userAgent);
-    var reffer = '183';
-    var channel = 'stenly132';
-    var ioslink = 'https://appwall.go2affise.com/click?pid='+reffer+'&offer_id=7';
-    var androidlink = 'https://appwall.go2affise.com/click?pid='+reffer+'&offer_id=8';
-    if (md.phone()) {
-        if (md.os()=='iOS') {
-            window.location.href = ioslink;
-        }
-        if (md.os()=='AndroidOS') {
-            document.getElementById('web').style.opacity = 0;
-
-            document.write('123456');
-        }
-       
-            
-    } 
-    function gplay() {
-        window.location.href = androidlink;
-    }
-    function appstore() {
-        window.location.href = ioslink;
-    }
-
-</script>
-    
-    
-    
+</style>   
     
 
-</head>
+
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-       <iframe src="https://ad.admitad.com/g/xnbqrzr3cicf4dc79f74d57934c027/" height="1" width="1"></iframe>
 
     <!-- Intro Header -->
     <header class="intro" id="web">
