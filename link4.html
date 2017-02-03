@@ -1,0 +1,94 @@
+<!-- ТОЛЬКО СМАРТФОНЫ -->
+<html>
+    <head>
+         <title>Установка приложения</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         <style>
+             .right { text-align: right; z-index: 1; position: relative; }
+             .text { z-index: 2; position: absolute; font-size: 27px; font-family: sans-serif; width: 70%; }
+             .frame { opacity: 0; }    
+             div {opacity: 1;}
+        </style>
+        <link href="style/main.css" rel="stylesheet">
+
+        
+        <script src="https://use.fontawesome.com/63adbfa468.js"></script>
+        <script src="js/mobile-detect.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
+
+        <script type="text/javascript">
+            var md = new MobileDetect(window.navigator.userAgent);
+            var channel = 'stenly132';
+            var ioslink = 'https://appwall.go2affise.com/click?pid=100&offer_id=7';
+            var androidlink = 'https://appwall.go2affise.com/click?pid=100&offer_id=8';
+            if (md.phone()) {
+                if (md.os()=='iOS') {
+                    window.location.href = ioslink;
+                }
+                if (md.os()=='AndroidOS') {
+                    //window.location.href = androidlink;
+
+
+                }
+            } else {
+                $('#android').fadeTo("slow",0);
+                document.getElementById("p1").innerHTML = "456";
+        
+            }               
+    
+            function gplay() {
+                window.location.href = androidlink;
+            }
+            function appstore() {
+                window.location.href = ioslink;
+            }
+
+    </script>
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">        
+        <div id="android">
+        <div class="text" id="text1">
+            Для установки приложения, откройте эту страницу в браузере, нажав на <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </div>
+        <div class="right">
+            <img src="Draw.png" width="150">
+        </div>
+        <div class="frame">
+            <iframe src="https://appwall.go2affise.com/click?pid=1&offer_id=8" height="1" width="1" class="frame"></iframe>
+        </div>
+        </div>
+        
+        <header class="intro" id="web">
+        <div class="intro-body">        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading"><script type="text/javascript">document.write(channel);</script> рекомендует:<br><br>
+                        <script type="text/javascript">
+                                var href = window.location.host+window.location.pathname;
+                                document.write(href);
+                        </script>
+                        <br><br>откройте эту страницу на смартфоне</h1>
+                        <p class="intro-text">Если вы уверены, что эта страница открыта на смартфоне,<br> то приложение можно скачать по ссылкам:</p>
+                        <p><a href="#" onclick="gplay()">Android</a></p>
+                        <p><a href="#" onclick="appstore()">iOS</a></p>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </header>
+        <script>            
+            if (md.phone()) {
+                document.getElementById("web").style.opacity = "0";
+
+ 
+            } else {
+                document.getElementById("android").style.opacity = "0";
+            }
+        </script>
+       
+    </body>
+</html>
