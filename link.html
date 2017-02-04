@@ -463,6 +463,9 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+    android {
+        z-index: 100;
+    }
 </style>   
 
         
@@ -502,7 +505,19 @@ body {
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">        
         <div id="android">
         <div class="text" id="text1">
-            Для установки приложения, откройте эту страницу в браузере, нажав на <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+            <header class="intro" id="web">
+        <div class="intro-body">        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Для установки приложения, откройте эту страницу в браузере, нажав на <i class="fa fa-ellipsis-v" aria-hidden="true"></i></h1>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </header>
         </div>
         <div class="right">
             <img src="Draw.png" width="150">
